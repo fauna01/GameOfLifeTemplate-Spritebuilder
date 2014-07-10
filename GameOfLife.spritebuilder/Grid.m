@@ -142,6 +142,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 else if (currentCreature.livingNeighbors <= 1 || currentCreature.livingNeighbors >= 4 ){
                     currentCreature.isAlive = NO;
                 }
+                _totalAlive = numAlive;
 
     }
 @end
