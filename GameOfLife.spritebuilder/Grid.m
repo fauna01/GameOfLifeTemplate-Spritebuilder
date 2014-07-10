@@ -133,7 +133,7 @@ for (int i = 0; i < [_gridArray count]; i++)
         }
         return isIndexValid;
     }
-    -(void)updateCreature{
+    -(void)updateCreatures{
         //initialize numbAlive to 0
         int numbAlive = 0;
         // iterate through the rows
