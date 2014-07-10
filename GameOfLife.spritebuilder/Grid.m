@@ -73,6 +73,17 @@ static const int GRID_COLUMNS = 10;
     int column = touchPosition.x/_cellWidth;
 }
 
+-(void)evolveStep
+{
+    //update each Creature's neighbor count
+    [self countNeighbors];
+    
+    //update each Creature's state
+    [self updateCreatures];
+    
+    //update the generation so the label's text will display the correct generation
+    _generation++;
+}
 -(void)countNeighbours
 {
 // iterate through the rows
@@ -122,7 +133,6 @@ for (int i = 0; i < [_gridArray count]; i++)
         }
         return isIndexValid;
     }
-    
     -(void)updateCreature{
         //initialize numbAlive to 0
         int numbAlive = 0;
@@ -145,4 +155,7 @@ for (int i = 0; i < [_gridArray count]; i++)
                 _totalAlive = numAlive;
 
     }
+
+            
+
 @end
